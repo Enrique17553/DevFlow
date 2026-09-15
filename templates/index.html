@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DevFlow — Gestão Inteligente</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <span>◆</span> DevFlow
+    </div>
+
+    <nav>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#clientes">Clientes</a>
+        <a href="#pedidos">Pedidos</a>
+    </nav>
+</header>
+
+<main>
+
+<section class="hero">
+    <div>
+        <p class="tag">GESTÃO • TECNOLOGIA • PERFORMANCE</p>
+
+        <h1>
+            Controle seu negócio
+            <span>em um só lugar.</span>
+        </h1>
+
+        <p>
+            Uma plataforma moderna para acompanhar clientes,
+            pedidos e resultados.
+        </p>
+
+        <button onclick="scrollToSection('dashboard')">
+            Abrir dashboard →
+        </button>
+    </div>
+
+    <div class="hero-card">
+        <div class="card-top">
+            <span>Performance</span>
+            <strong>+32%</strong>
+        </div>
+
+        <div class="chart">
+            <div style="height:35%"></div>
+            <div style="height:55%"></div>
+            <div style="height:42%"></div>
+            <div style="height:70%"></div>
+            <div style="height:62%"></div>
+            <div style="height:90%"></div>
+        </div>
+    </div>
+</section>
+
+<section id="dashboard">
+
+    <div class="section-title">
+        <div>
+            <p class="tag">VISÃO GERAL</p>
+            <h2>Dashboard</h2>
+        </div>
+
+        <span id="status">● Sistema online</span>
+    </div>
+
+    <div class="stats">
+
+        <div class="stat-card">
+            <p>Clientes</p>
+            <h3 id="clientes">0</h3>
+            <span>clientes cadastrados</span>
+        </div>
+
+        <div class="stat-card">
+            <p>Pedidos</p>
+            <h3 id="pedidos">0</h3>
+            <span>pedidos registrados</span>
+        </div>
+
+        <div class="stat-card">
+            <p>Faturamento</p>
+            <h3 id="faturamento">R$ 0</h3>
+            <span>valor total</span>
+        </div>
+
+        <div class="stat-card">
+            <p>Concluídos</p>
+            <h3 id="concluidos">0</h3>
+            <span>pedidos finalizados</span>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="clientes">
+
+    <div class="section-title">
+        <div>
+            <p class="tag">CRM</p>
+            <h2>Clientes</h2>
+        </div>
+
+        <input
+            id="search"
+            type="text"
+            placeholder="Pesquisar cliente..."
+            oninput="buscarClientes()"
+        >
+    </div>
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Cliente</th>
+                    <th>Email</th>
+                    <th>Empresa</th>
+                </tr>
+            </thead>
+
+            <tbody id="clientes-table">
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+<section id="pedidos">
+
+    <div class="section-title">
+        <div>
+            <p class="tag">VENDAS</p>
+            <h2>Pedidos recentes</h2>
+        </div>
+    </div>
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Cliente</th>
+                    <th>Produto</th>
+                    <th>Valor</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody id="pedidos-table">
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+<section class="cta">
+
+    <p class="tag">DEVFLOW API</p>
+
+    <h2>
+        Backend rápido.<br>
+        Interface simples.
+    </h2>
+
+    <p>
+        O sistema utiliza uma API REST construída em Python
+        para fornecer os dados ao frontend.
+    </p>
+
+    <a href="/api/dashboard" target="_blank">
+        Ver API →
+    </a>
+
+</section>
+
+</main>
+
+<footer>
+    <strong>DevFlow</strong>
+    <span>Projeto desenvolvido por Enrique</span>
+</footer>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
