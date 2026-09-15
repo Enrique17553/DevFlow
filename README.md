@@ -11,7 +11,7 @@ HTML5
 CSS3
 REST API
 
-## ✨ Funcionalidades
+Funcionalidades
 
 Dashboard
 Gerenciamento de clientes
